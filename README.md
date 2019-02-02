@@ -1,4 +1,4 @@
-Aaron Imbrock's Code 201 Repo
+Code 201
 -----------------------
 
 LAB	| DUE DATE	| TITLE 
