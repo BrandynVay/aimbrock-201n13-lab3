@@ -1,5 +1,8 @@
 Code 201
 -----------------------
+Navigator: Aaron Imbrock
+Driver: Brandyn Vay
+Worked together
 
 LAB	| DUE DATE	| TITLE 
 --------|---------------|---------------
