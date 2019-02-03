@@ -3,9 +3,9 @@ Code 201
 
 LAB	| DUE DATE	| TITLE 
 --------|---------------|---------------
-Lab 02	| 2/02/18 11 PM	| About Me
+Lab 03	| 2/03/18 11 PM	| About Me v2
 
-[Lab 2 Assignment](https://github.com/codefellows/seattle-201n13/tree/master/class-02/lab)
+[Lab 3 Assignment](https://github.com/codefellows/seattle-201n13/tree/master/class-03/lab)
 
 ## Assignment
 
