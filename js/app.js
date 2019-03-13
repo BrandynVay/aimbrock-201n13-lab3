@@ -37,27 +37,27 @@ var totalCorrect = 0;
 // Q1 - Q5
 // Yes or No Questions, enforcing Yes or No responses
 function questions0105(){
-for (var j = 0; j < (guessingGameQuestions.length - 2); j++) {
-  console.log('j: ',j);
-  var myBool = null;
-  console.log('myBool: ', myBool);
+  for (var j = 0; j < (guessingGameQuestions.length - 2); j++) {
+    console.log('j: ',j);
+    var myBool = null;
+    console.log('myBool: ', myBool);
 
-  correctAnswer = guessingGameQuestions[j][1];
-  console.log('correctAnswer: ', correctAnswer);
+    correctAnswer = guessingGameQuestions[j][1];
+    console.log('correctAnswer: ', correctAnswer);
 
-  while (!yesOrNo.includes(guess)) {
-    guess = prompt(guessingGameQuestions[j][0]);
-    guess = guess.toLowerCase();
+    while (!yesOrNo.includes(guess)) {
+      guess = prompt(guessingGameQuestions[j][0]);
+      guess = guess.toLowerCase();
 
-    if (guess === 'yes') {
-      myBool = true;
-    } else {
-      myBool = false;
+      if (guess === 'yes') {
+        myBool = true;
+      } else {
+        myBool = false;
+      }
     }
   }
-}
 
-questions0105();
+  questions0105();
 
 
   // Console output: Question, users guess, users guess converted to bool
@@ -74,33 +74,33 @@ questions0105();
 console.log('guess value is:', guess);
 // Q6 Favorite number question. Max 4 attempts.
 // Enforces number input
-functuion question06(){
-whichQuestion = 5;
-for (var j = 0; j < guessingGameQuestions[whichQuestion][2]; j++) {
-  guess = '';
+function question06(){
+  whichQuestion = 5;
+  for (var j = 0; j < guessingGameQuestions[whichQuestion][2]; j++) {
+    guess = '';
   
-  console.log('Attempt X of 4: ', j + 1);
-  correctAnswer = guessingGameQuestions[whichQuestion][1];
+    console.log('Attempt X of 4: ', j + 1);
+    correctAnswer = guessingGameQuestions[whichQuestion][1];
 
-  while (!numbers1through10.includes(guess)) {
-    guess = prompt(guessingGameQuestions[whichQuestion][0]);
-    console.log('Guess number guess: ', guess);
-  }
+    while (!numbers1through10.includes(guess)) {
+      guess = prompt(guessingGameQuestions[whichQuestion][0]);
+      console.log('Guess number guess: ', guess);
+    }
 
-  // Question, answer, user's guess
-  console.log(guessingGameQuestions[whichQuestion][0] + ' Answer: ' + correctAnswer + ' Guess: ' + guess);
+    // Question, answer, user's guess
+    console.log(guessingGameQuestions[whichQuestion][0] + ' Answer: ' + correctAnswer + ' Guess: ' + guess);
 
-  if (guess == correctAnswer) {
-    alert('Good guess!');
-    guessingGameQuestions[whichQuestion][3] = 1;
-    break;
-  } else if (guess > correctAnswer) {
-    alert('Your guess is too high!');
+    if (guess == correctAnswer) {
+      alert('Good guess!');
+      guessingGameQuestions[whichQuestion][3] = 1;
+      break;
+    } else if (guess > correctAnswer) {
+      alert('Your guess is too high!');
+    }
+    else {
+      alert('Your guess is too low!');
+    }
   }
-  else {
-    alert('Your guess is too low!');
-  }
-}
 }
 
 question06();
@@ -109,28 +109,28 @@ question06();
 // User guess must be a state or a territor
 whichQuestion = 6;
 function question07(){
-for (var j = 0; j < guessingGameQuestions[whichQuestion][2]; j++) {
-  guess = '';
-  console.log('Attempt X of 6: ', j + 1);
-  correctAnswer = guessingGameQuestions[whichQuestion][1];
+  for (var j = 0; j < guessingGameQuestions[whichQuestion][2]; j++) {
+    guess = '';
+    console.log('Attempt X of 6: ', j + 1);
+    correctAnswer = guessingGameQuestions[whichQuestion][1];
 
-  while (!statesOfAmerica.includes(guess)) {
-    guess = prompt(guessingGameQuestions[whichQuestion][0]);
-    guess = guess.toLowerCase();
-    console.log('Guess statesOfAmerica: ', guess);
+    while (!statesOfAmerica.includes(guess)) {
+      guess = prompt(guessingGameQuestions[whichQuestion][0]);
+      guess = guess.toLowerCase();
+      console.log('Guess statesOfAmerica: ', guess);
+    }
+
+    // Question, answer, user's guess
+    console.log(guessingGameQuestions[whichQuestion][0] + ' Answer: ' + correctAnswer + ' Guess: ' + guess);
+
+    if (correctAnswer.includes(guess)) {
+      alert('Good guess!');
+      guessingGameQuestions[whichQuestion][3] = 1;
+      break;
+    } else {
+      alert('Nope. Try again!');
+    }
   }
-
-  // Question, answer, user's guess
-  console.log(guessingGameQuestions[whichQuestion][0] + ' Answer: ' + correctAnswer + ' Guess: ' + guess);
-
-  if (correctAnswer.includes(guess)) {
-    alert('Good guess!');
-    guessingGameQuestions[whichQuestion][3] = 1;
-    break;
-  } else {
-    alert('Nope. Try again!');
-  }
-}
 }
 
 question07();
